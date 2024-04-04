@@ -1,0 +1,46 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: lightcoral;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+header h1{
+    margin: 0;
+}
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li{
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: wavy;
+}
+section{
+    padding: 20px;
+}
+section h2{
+    color: lightcoral;
+}
+About, Education, Contact{
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+body{
+    text-align: center;
+}
+footer{
+    background-color: lightcoral;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
