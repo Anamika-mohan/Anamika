@@ -1,5 +1,5 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -30,11 +30,6 @@ section{
 section h2{
     color: lightcoral;
 }
-About, Education, Contact{
-    background-color: white;
-    padding: 10px;
-    margin-bottom: 10px;
-}
 body{
     text-align: center;
 }
@@ -43,4 +38,7 @@ footer{
     color: white;
     padding: 20px;
     text-align: center;
+}
+#Skills ul{
+    list-style-type: none;
 }
