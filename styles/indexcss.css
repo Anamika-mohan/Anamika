@@ -1,17 +1,22 @@
 body{
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: lighter;
   font-style: normal;
+  background-color: lightgrey;
 }
 header{
-    background-color:lightpink;
-    color: rgb(14, 14, 14);
+    background-color:grey;
+    color: black;
     padding: 20px;
     text-align: center;
 }
 header h1{
     margin: 0;
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: palevioletred;
+
 }
 nav ul{
     list-style-type: none;
@@ -22,7 +27,7 @@ nav ul li{
     margin-right: 20px;
 }
 nav ul li a{
-    color: rgb(5, 5, 5);
+    color: black;
     text-decoration: wavy;
 }
 section{
@@ -32,16 +37,20 @@ section h2{
     font-family: "Satisfy", cursive;
     font-weight: 400;
     font-style: normal;
-    color:lightpink;
+    color:palevioletred;
 }
 body{
     text-align: center;
 }
 footer{
-    background-color:lightpink;
-    color: rgb(10, 10, 10);
+    background-color:grey;
+    color: black;
     padding: 20px;
     text-align: center;
+}
+footer h3{
+    font-family: Satisfy, cursive;
+    color: palevioletred;
 }
 #Skills ul{
     list-style-type: none;
