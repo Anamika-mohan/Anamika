@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="display:flex;flex-direction:row;justify-content:space-around">
+        <button id="minus">-</button>
+        <p id="value">0</p>
+        <button id="plus">+</button>
+    </div>
+    <script>
+     plusBtn=document.getElementById("plus");
+     minusBtn=document.getElementById("minus");
+
+     plusBtn.addEventListener('click',(e) =>{
+        let val=document.getElementById("value");
+        val.innerHTML=parseInt(val.innerHTML) + 5;
+     })
+     minusBtn.addEventListener('click',(e) =>{
+        let val=document.getElementById("value");
+        val.innerHTML=parseInt(val.innerHTML) - 3;
+     })
+    </script>
+  </body>
+</html>
