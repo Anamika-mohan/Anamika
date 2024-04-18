@@ -7,18 +7,22 @@
 <style>
      body{
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
-        background-color: lightgoldenrodyellow;
+        background-color: lightblue;
         text-align: center;
-        margin-top: 300px;
+        margin-top: 200px;
         padding: 0%;
      }
      h1{
-        color: lightcoral;
+        color: darkblue;
         text-align: center;
         margin-top: 50px;
      }
      header{
         background-color: aliceblue;
+     }
+     img{
+        max-width: 20%;
+        margin: 20px;
      }
 </style>
 </head>
@@ -31,13 +35,30 @@
         function generateUniqueContent()
         {
             const content = [
-                "“We cannot solve problems with the kind of thinking we employed when we came up with them.” —Albert Einstein",
-                "“Learn as if you will live forever, live like you will die tomorrow.” —Mahatma Gandhi",
-                "“Stay away from those people who try to disparage your ambitions. Small minds will always do that, but great minds will give you a feeling that you can become great too.” —Mark Twain",
-                "“When you give joy to other people, you get more joy in return. You should give a good thought to the happiness that you can give out.” —Eleanor Roosevelt",
-                "“When you change your thoughts, remember to also change your world.” —Norman Vincent Peale",
-                "“It is only when we take chances that our lives improve. The initial and the most difficult risk we need to take is to become honest.” —Walter Anderson",
-                "“Nature has given us all the pieces required to achieve exceptional wellness and health, but has left it to us to put these pieces together.” —Diane McLaren"
+                {
+                    quote: "“Learn as if you will live forever, live like you will die tomorrow.” —Mahatma Gandhi",
+                    image: "https://clipart-library.com/newhp/53-536005_people-clipart-happy-cartoon-transparent-happy-person-clipart.png"
+                },
+                {
+                    quote: "“Stay away from those people who try to disparage your ambitions. Small minds will always do that, but great minds will give you a feeling that you can become great too.” —Mark Twain",
+                    image: "https://www.learning-mind.com/wp-content/uploads/2020/06/stay-away-from-negative-people.jpg"
+                },
+                {
+                    quote: "“When you give joy to other people, you get more joy in return. You should give a good thought to the happiness that you can give out.” —Eleanor Roosevelt",
+                    image: "https://www.wikihow.com/images/thumb/0/03/Help-Others-Step-2-Version-3.jpg/v4-460px-Help-Others-Step-2-Version-3.jpg.webp"
+                },
+                {
+                    quote: "“When you change your thoughts, remember to also change your world.” —Norman Vincent Peale",
+                    image: "https://static.vecteezy.com/system/resources/previews/007/608/370/original/positive-thoughts-shift-from-feeling-sad-optimism-and-the-power-of-mind-to-change-mood-behavior-decision-making-powers-vector.jpg"
+                },
+                {
+                    quote: "“It is only when we take chances that our lives improve. The initial and the most difficult risk we need to take is to become honest.” —Walter Anderson",
+                    image: "https://clipart-library.com/data_images/91753.png"
+                },
+                {
+                    quote: "“Nature has given us all the pieces required to achieve exceptional wellness and health, but has left it to us to put these pieces together.” —Diane McLaren",
+                    image: "https://img.freepik.com/premium-vector/health-fitness-cartoon_24640-25707.jpg"
+                },
             ];
             const randomIndex = Math.floor(Math.random() * content.length);
             return content[randomIndex];
@@ -45,7 +66,11 @@
         function displayUniqueContent()
         {
             const uniqueContent = document.getElementById('unique-content');
-            uniqueContent.textContent = generateUniqueContent();
+            const {quote,image} = generateUniqueContent();
+            uniqueContent.innerHTML = `
+            <p>${quote}</p>
+            <img src="${image}" alt="Motivational Image">
+        `;
         }
         window.onload = displayUniqueContent();
     </script>
