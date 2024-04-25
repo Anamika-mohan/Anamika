@@ -1,0 +1,70 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 10;
+    padding: 5;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 2;
+    }
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: slideInUp 2s ease;
+    gap: 10;
+}
+
+p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: slideInUp 2s ease;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: slideInUp 2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 2;
+    }
+}
