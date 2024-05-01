@@ -5,14 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Calculator</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            text-align: center;
+        body{
+            text-align:center;
+            color: brown;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin:  0px  0px  0px 500px;
+            padding: 0px;
+            background-image: url('https://cms.involve.me/blog/how-to-embed-calculator/calculatorL.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
         }
+    
         body h2{
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 50px;
+            text-shadow: 5px 5px 5px beige;
         }
         label {
             display: block;
@@ -27,17 +40,25 @@
         }
         button {
             padding: 10px 20px;
-            background-color: #4CAF50;
+            background-color: darkred;
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
         button:hover {
-            background-color: #45a049;
+            background-color: lightcoral;
         }
         #result {
-            margin-top: 20px;
+            margin-top: 60px;
+            font-size: 40px;
+        }
+        select{
+            background-color: burlywood;
+            color: brown;
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -110,14 +131,14 @@
                 var time = parseFloat(document.getElementById('time').value);
 
                 var simpleInterest = (principal * interestRate * time) / 100;
-                resultElement.innerHTML = "Simple Interest: $" + simpleInterest.toFixed(2);
+                resultElement.innerHTML = "Simple Interest: ₹" + simpleInterest.toFixed(2);
             } else if (calculationType === 'compoundInterest') {
                 var principal = parseFloat(document.getElementById('principal').value);
                 var interestRate = parseFloat(document.getElementById('interestRate').value);
                 var time = parseFloat(document.getElementById('time').value);
 
                 var compoundInterest = principal * Math.pow((1 + interestRate / 100), time) - principal;
-                resultElement.innerHTML = "Compound Interest: $" + compoundInterest.toFixed(2);
+                resultElement.innerHTML = "Compound Interest: ₹" + compoundInterest.toFixed(2);
             } else if (calculationType === 'loanPayment') {
                 var loanAmount = parseFloat(document.getElementById('loanAmount').value);
                 var annualInterestRate = parseFloat(document.getElementById('annualInterestRate').value);
@@ -125,7 +146,7 @@
 
                 var monthlyInterestRate = annualInterestRate / 12 / 100;
                 var monthlyPayment = (loanAmount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -loanTerm));
-                resultElement.innerHTML = "Monthly Payment: $" + monthlyPayment.toFixed(2);
+                resultElement.innerHTML = "Monthly Payment: ₹" + monthlyPayment.toFixed(2);
             } else if (calculationType === 'investmentReturn') {
                 var investmentAmount = parseFloat(document.getElementById('investmentAmount').value);
                 var annualReturnRate = parseFloat(document.getElementById('annualReturnRate').value);
@@ -133,7 +154,7 @@
 
                 var totalReturn = investmentAmount * Math.pow((1 + annualReturnRate / 100), investmentYears);
                 var profit = totalReturn - investmentAmount;
-                resultElement.innerHTML = "Total Return: $" + totalReturn.toFixed(2) + "<br>Profit: $" + profit.toFixed(2);
+                resultElement.innerHTML = "Total Return: ₹" + totalReturn.toFixed(2) + "<br>Profit: ₹" + profit.toFixed(2);
             }
         }
     </script>
